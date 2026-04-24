@@ -15,7 +15,7 @@ pipeline {
         }
         stage('release') {
             steps {
-                archiveArtifacts artifacts: 'target/*.tar', followSymlinks: false
+                archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
             }
         }
     }
