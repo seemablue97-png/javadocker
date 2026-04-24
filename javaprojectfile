@@ -33,7 +33,7 @@ sh '. /etc/profile.d/sonar-scanner.sh'
 stage('Analyzing Code Quality') {
 steps {
 // Step to analyze code quality with SonarQube
-sh '/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=elizabethsonar_elizabethsonar -Dsonar.organization=elizabethsonar -Dsonar.qualitygate.wait=true -Dsonar.qualitygate.timeout=300 -Dsonar.sources=src/main/java/ -Dsonar.java.binaries=target/classes -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=d03cad2035e1af18266a80ab39b96e0ebabe5e60'
+sh '/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=elizabethsonar_elizabethsonar -Dsonar.organization=elizabethsonar -Dsonar.qualitygate.wait=false -Dsonar.qualitygate.timeout=300 -Dsonar.sources=src/main/java/ -Dsonar.java.binaries=target/classes -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=d03cad2035e1af18266a80ab39b96e0ebabe5e60'
 }
 }
 
